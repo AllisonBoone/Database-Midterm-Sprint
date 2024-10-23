@@ -1,12 +1,13 @@
 const { Pool } = require('pg');
 
 // PostgreSQL connection
+// made a .env file to keep info secure.
 const pool = new Pool({
-  user: 'postgres', //This _should_ be your username, as it's the default one Postgres uses
-  host: 'localhost',
-  database: 'Movie_Rental', //This should be changed to reflect your actual database
-  password: '44Aust1n##', //This should be changed to reflect the password you used when setting up Postgres
-  port: 5432,
+  user: process.env.PG_USER,
+  host: process.env.PG_HOST,
+  database: process.env.PG_DATABASE,
+  password: process.env.PG_PASSWORD,
+  port: process.env.PG_PORT,
 });
 
 /**

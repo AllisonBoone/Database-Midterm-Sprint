@@ -1,3 +1,4 @@
+/* Movie title, release date, genre and director data */
 INSERT INTO Movies (title, year_released, genre, director)
 VALUES
 ('Jurassic Park', 1993, 'Adventure', 'Steven Spielberg'),
@@ -6,6 +7,7 @@ VALUES
 ('Forrest Gump', 1994, 'Drama', 'Robert Zemeckis'),
 ('Spirited Away', 2001, 'Fantasy', 'Hayao Miyazaki');
 
+/* Customer first name, last name, email and phone number data */
 INSERT INTO Customers(first_name, last_name, email, phone)
 VALUES
 ('Alice', 'Miller', 'alice.miller@example.com', '678-901-2345'),
@@ -14,6 +16,7 @@ VALUES
 ('James', 'Martinez', 'james.martinez@example.com', '901-234-5678'),
 ('Sophia', 'Anderson', 'sophia.anderson@example.com', '012-345-6789');
 
+/* Rental customer, movie, rental date and return date data */
 INSERT INTO Rentals (customer_id, movie_id, rental_date, return_date)
 VALUES
   (1, 1, '2024-01-01', '2024-01-08'),
