@@ -1,0 +1,27 @@
+Movies Table:
+1NF: The table is in 1NF because each movie has a single title, year, genre, and director.
+
+2NF: The table is in 2NF because movie_id is the primary key, and all non-primary key columns (title, year_released, genre, director) depend fully on the movie_id.
+
+3NF: The table is in 3NF because the genre, title, year, and director all depend only on movie_id.
+
+Customers Table:
+1NF: The table is in 1NF because each customer has a single first name, last name, email, and phone number.
+
+2NF: The table is in 2NF because customer_id is the primary key, and all other attributes (first name, last name, email, phone) depend on the whole key.
+
+3NF: The table is in 3NF because the first name, last name, email, and phone all depend only on customer_id.
+
+Rentals Table:
+1NF: The table is in 1NF because each rental has a single customer, movie, rental date, and return date.
+
+2NF: The table is in 2NF because rental_id is the primary key, and all other columns (customer_id, movie_id, rental_date, return_date) depend on it fully.
+
+3NF: The table is in 3NF because the customer_id, movie_id, rental_date, and return_date all depend only on the rental_id.
+
+All tables are in 3NF because:
+Each table is in 1NF (all columns contain atomic values).
+
+Each table is in 2NF (all non-primary key attributes fully depend on the primary key).
+
+Each table is in 3NF (no transitive dependencies exist between non-primary key attributes).
