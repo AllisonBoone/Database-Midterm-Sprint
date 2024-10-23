@@ -66,7 +66,7 @@ async function insertMovie(title, year, genre, director) {
     );
     console.log(`Movie "${title}" inserted successfully.`);
   } catch (error) {
-    console.error('Error inserting movie:', error);
+    console.error('Error inserting movie: ', error);
   }
 }
 
@@ -75,6 +75,16 @@ async function insertMovie(title, year, genre, director) {
  */
 async function displayMovies() {
   // TODO: Add code to retrieve and print all movies from the Movies table
+  try {
+    const result = await pool.query('SELECT * FROM Movies');
+    if (result.rows.length === 0) {
+      console.log('No movies were found.');
+    } else {
+      console.table(result.rows);
+    }
+  } catch (error) {
+    console.error('Error retrieving movies: ', error);
+  }
 }
 
 /**
